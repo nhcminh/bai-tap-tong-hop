@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+button:focus {
+  outline: none;
+}
+::selection {
+    color: white;
+    background-color: #d6b161;
+}

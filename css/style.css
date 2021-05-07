@@ -132,7 +132,7 @@ body {
 #navbar .nav_brand {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  width: 65%;
+  width: 105px;
 }
 
 #navbar .navbar-nav .nav-item {

@@ -1,0 +1,70 @@
+#home {
+  position: relative;
+  .owl-carousel {
+    .item {
+      height: 100vh;
+      background-size: cover;
+      background-position: top center;
+    }
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      margin-top: 0;
+      .owl-prev {
+        width: 25%;
+        cursor: url("../../img/carousel/arrow_left.png"), auto;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      .owl-next {
+        @extend .owl-prev;
+        cursor: url("../../img/carousel/arrow_right.png"), auto;
+      }
+    }
+    .owl-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      .owl-dot {
+        span {
+          background-color: transparent;
+          border: 1px solid $light;
+        }
+      }
+      .owl-dot.active {
+        span {
+          background-color: $light;
+        }
+      }
+    }
+  }
+  .navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    padding: 0;
+    .navbar-nav {
+      .nav-item {
+        padding: 0 5px;
+        .nav-link {
+          font-size: 13px;
+          color: $dark;
+          text-transform: uppercase;
+          font-weight: normal;
+        }
+        .nav-link.active {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}

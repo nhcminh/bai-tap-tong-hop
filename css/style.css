@@ -141,4 +141,88 @@ body {
 #home .navbar .navbar-nav .nav-item .nav-link.active {
   color: #d6b161;
 }
+
+#about .about__item {
+  border-radius: 5px;
+}
+
+#about .about__item p {
+  line-height: 1.2rem;
+}
+
+#about .about__item .about__icon-wrapper {
+  position: relative;
+  top: -40px;
+  left: -10px;
+  padding: 10px;
+  background: #fff;
+  display: inline;
+}
+
+#about .about__item .about__icon-wrapper .about__icon {
+  background-color: #333;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#about .about__skill {
+  background: url("../../img/parallax/4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#about .about__skill h3 {
+  letter-spacing: 2px;
+}
+
+#about .about__skill .skill__details {
+  height: 50vh;
+}
+
+#about .about__skill .skill__details .progress {
+  background-color: #606060;
+  border-radius: 0;
+  height: 1.3rem;
+  overflow: visible;
+}
+
+#about .about__skill .skill__details .progress .progress-bar {
+  position: relative;
+}
+
+#about .about__skill .skill__details .progress .progress-bar span {
+  display: inline-block;
+  position: absolute;
+  width: 35px;
+  text-align: center;
+  top: -30px;
+  right: 5px;
+  background-color: #a4a4a4;
+  color: #333;
+  border-radius: 20px;
+}
+
+#about .about__skill .skill__details .progress .progress-bar span::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  bottom: -2px;
+  left: 15px;
+  background-color: #a4a4a4;
+}
+
+#about .bg__overlay {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 /*# sourceMappingURL=style.css.map */

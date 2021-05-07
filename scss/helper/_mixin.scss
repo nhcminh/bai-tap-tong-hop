@@ -1,0 +1,32 @@
+@mixin overlay__hover {
+  .overlay__hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $overlay-light;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s;
+    top: 0;
+    &:hover {
+      opacity: 1;
+    }
+    h4 {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+    }
+  }
+}
+@mixin btn-black {
+  .btn-black {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}

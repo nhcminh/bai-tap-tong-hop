@@ -45,26 +45,4 @@
       }
     }
   }
-  .navbar {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
-    padding: 0;
-    .navbar-nav {
-      .nav-item {
-        padding: 0 5px;
-        .nav-link {
-          font-size: 13px;
-          color: $dark;
-          text-transform: uppercase;
-          font-weight: normal;
-        }
-        .nav-link.active {
-          color: $yellow;
-        }
-      }
-    }
-  }
 }

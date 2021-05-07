@@ -1,0 +1,30 @@
+#navbar {
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    padding: 0;
+    .nav_brand{
+        transition: all 0.3s;
+        width: 65%;
+    }
+    .navbar-nav {
+      .nav-item {
+        padding: 0 5px;
+        .nav-link {
+          font-size: 13px;
+          color: $dark;
+          text-transform: uppercase;
+          font-weight: normal;
+          &:hover{
+              color: $yellow;
+          }
+        }
+        .nav-link.active {
+          color: $yellow;
+        }
+      }
+    }
+  }

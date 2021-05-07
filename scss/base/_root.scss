@@ -2,16 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
+}
+h1,
+h2 {
+  letter-spacing: 2px;
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: $dark;
+  font-weight: normal;
+  line-height: 1.5;
+}
 p {
   margin: 0;
+  color: #7e7e7e;
+  line-height: 2rem;
 }
 li {
   list-style: none;
@@ -20,12 +29,22 @@ li {
 a:link,
 a:visited {
   text-decoration: none;
-  color: black;
+  color: $dark;
 }
 button:focus {
   outline: none;
 }
 ::selection {
-    color: white;
-    background-color: #d6b161;
+  color: white;
+  background-color: $yellow;
+}
+body {
+  color: $black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }

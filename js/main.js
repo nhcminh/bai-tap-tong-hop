@@ -1,16 +1,26 @@
 
 $(document).ready(function () {
     // Navbar
-    $(document).on("scroll", function () {
-        if (pageYOffset != 0) {
-            $(".nav_brand").css({ width: "62px" });
-            $("#navbar").css({ "background-color": "rgba(255, 255, 255, 1)" });
-        } else {
-            $(".nav_brand").css({ width: "105px" });
-            $("#navbar").css({ "background-color": "rgba(255, 255, 255, 0)" });
-        }
-    });
+    if (window.innerWidth > 768) {
+        $(window).on("scroll", function () {
 
+            if (pageYOffset != 0) {
+                $(".nav_brand").css({ width: "62px" });
+                $("#navbar").css({ "background-color": "rgba(255, 255, 255, 1)" });
+            } else {
+                $(".nav_brand").css({ width: "105px" });
+                $("#navbar").css({ "background-color": "rgba(255, 255, 255, 0)" });
+            }
+
+        });
+    } else {
+        $(".nav_brand").css({ width: "62px" });
+        $("#navbar").css({ "background-color": "rgba(255, 255, 255, 1)" });
+    }
+    //Count up
+    $('.counter').countUp({
+        'time': 1200,
+    });
     // Portfolio
 
     $(".grid").isotope({

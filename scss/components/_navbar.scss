@@ -28,3 +28,14 @@
       }
     }
   }
+
+  @media (max-width:768px) {
+    #navbar {
+      .navbar-nav {
+        .nav-item {
+          border-top: solid 1px #f0f0f0;
+          padding: 0.5rem 0 0.5rem 2rem;
+        }
+      }
+    }
+  }

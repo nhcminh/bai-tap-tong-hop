@@ -1,61 +1,92 @@
 #portfolio {
-    overflow: hidden;
-    .gallery {
-        .gallery__filters {
-            .gallery__filter {
-                text-transform: uppercase;
-                color: #a9a8a8;
-                margin: auto 0.5rem;
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-                &:focus {
-                    box-shadow: none;
-                }
-            }
-            .active {
-                .gallery__filter {
-                    color: $dark;
-                }
-            }
+  overflow: hidden;
+  .gallery {
+    .gallery__filters {
+      .gallery__filter {
+        text-transform: uppercase;
+        color: #a9a8a8;
+        margin: auto 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        &:focus {
+          box-shadow: none;
         }
-        .gallery__item {
-            position: relative;
-            @include overlay__hover;
-            .overlay__hover {
-                width: calc(100% - 1rem);
-            }
-            span.icon-basic_magnifier {
-                font-size: 2rem;
-            }
-            p {
-                text-transform: uppercase;
-                font-size: 0.75rem;
-                letter-spacing: 2px;
-                a {
-                    color: #757575;
-                }
-            }
-            a {
-                transition: all 0.5s;
-                &:hover {
-                    color: $yellow;
-                }
-            }
+      }
+      .active {
+        .gallery__filter {
+          color: $dark;
         }
+      }
     }
-    .cta {
-        background-color: #222;
-        span {
-            font-size: 0.9rem;
+    .gallery__item {
+      position: relative;
+      @include overlay__hover;
+      .overlay__hover {
+        width: calc(100% - 1rem);
+      }
+      span.icon-basic_magnifier {
+        font-size: 2rem;
+      }
+      p {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        a {
+          color: #757575;
         }
-        h3 {
-            font-size: 1.5rem;
-            letter-spacing: 1px;
+      }
+      a {
+        transition: all 0.5s;
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .cta {
+    background-color: #222;
+    span {
+      font-size: 0.9rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      span {
+        font-size: 1.5rem;
+        color: $yellow;
+      }
+    }
+    @include btn-black;
+    .btn-black{
+        white-space: nowrap;
+    }
+  }
+}
+@media (max-width:768px) {
+    #portfolio {
+        .cta {
             span {
-                font-size: 1.5rem;
-                color: $yellow;
+                font-size: 0.7rem;
             }
+          h3 {
+            font-size: 0.9rem;
+            span {
+              font-size: 0.9rem;
+            }
+          }
+          .btn-black {
+            font-size: 0.75rem;
+            padding: 0.9rem 1rem;
+          }
         }
-        @include btn-black;
+      }
+}
+@media (max-width: 576px) {
+  #portfolio {
+    .cta {
+      .btn-black {
+        margin-top: 1rem;
+      }
     }
+  }
 }

@@ -1,8 +1,8 @@
 #portfolio {
     overflow: hidden;
-    .gallery{
-        .gallery__filters{
-            .gallery__filter{
+    .gallery {
+        .gallery__filters {
+            .gallery__filter {
                 text-transform: uppercase;
                 color: #a9a8a8;
                 margin: auto 0.5rem;
@@ -18,17 +18,16 @@
                 }
             }
         }
-        .gallery__item{
+        .gallery__item {
             position: relative;
-
             @include overlay__hover;
-            .overlay__hover{
+            .overlay__hover {
                 width: calc(100% - 1rem);
             }
-            span.icon-basic_magnifier{
+            span.icon-basic_magnifier {
                 font-size: 2rem;
             }
-            p{
+            p {
                 text-transform: uppercase;
                 font-size: 0.75rem;
                 letter-spacing: 2px;
@@ -46,13 +45,13 @@
     }
     .cta {
         background-color: #222;
-        span{
+        span {
             font-size: 0.9rem;
         }
-        h3{
+        h3 {
             font-size: 1.5rem;
             letter-spacing: 1px;
-            span{
+            span {
                 font-size: 1.5rem;
                 color: $yellow;
             }

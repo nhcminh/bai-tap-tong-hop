@@ -30,3 +30,75 @@
     }
   }
 }
+@mixin btn-black2 {
+  .btn-black {
+    color: #fff;
+    background-color: $black2;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+@mixin btn-white($hoverBg,$solid) {
+  .btn-white {
+    color: #222;
+    font-size: 0.9rem;
+    border: 1px solid $solid;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $hoverBg;
+      color: #fff;
+    }
+  }
+
+}
+
+//Owl Carousel 
+@mixin owl-carousel {
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 0;
+    .owl-prev {
+      width: 25%;
+      cursor: url("../../img/carousel/arrow_left.png"), auto;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .owl-next {
+      @extend .owl-prev;
+      cursor: url("../../img/carousel/arrow_right.png"), auto;
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    .owl-dot {
+      span {
+        background-color: transparent;
+        border: 1px solid $light;
+      }
+    }
+    .owl-dot.active {
+      span {
+        background-color: $light;
+      }
+    }
+  }
+}

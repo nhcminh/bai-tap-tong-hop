@@ -1,0 +1,104 @@
+#blog {
+  .blog__item {
+    .item__img,
+    .item__info {
+      height: 301px;
+    }
+    .item__info {
+      padding: 40px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: center;
+      .date {
+        position: relative;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 25px;
+        padding-top: 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: none;
+        font-size: 14px;
+      }
+      .date::after {
+        position: absolute;
+        z-index: 2;
+        top: 9px;
+        left: 0;
+        width: 60px;
+        height: 1px;
+        content: "";
+        display: block;
+        background: $black2;
+      }
+      a {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin: 0 0 30px 0;
+        font-weight: 600;
+        transition: all 0.3s;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      ul {
+        li {
+          margin-right: 10px;
+          a {
+            text-transform: uppercase;
+            color: $grey;
+            font-size: 12px;
+            transition: all 0.3s;
+            &:hover {
+              color: $yellow;
+            }
+          }
+        }
+      }
+    }
+    .item__img {
+      position: relative;
+    }
+    .item__img::after {
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 35px;
+      height: 14px;
+      margin-left: -7px;
+      content: "";
+      transform: rotate(45deg);
+      border-style: none;
+      border-color: #fff;
+      border-right: 1px solid #fff;
+      border-image: none;
+      background-color: #fff;
+    }
+    .item__img.top-0::after {
+      top: -15px;
+      margin-left: -19px;
+    }
+  }
+  .blog__a {
+    &:hover {
+      a,
+      i {
+        color: $black2;
+        cursor: pointer;
+      }
+    }
+    a,
+    i {
+      margin-right: 0.5rem;
+      letter-spacing: 1px;
+      color: $grey;
+      transition: all 0.3s;
+    }
+    i {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+}

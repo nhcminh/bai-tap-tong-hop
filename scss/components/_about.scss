@@ -40,6 +40,8 @@
                 border-radius: 0;
                 height: 1.3rem;
                 overflow: visible;
+                width: 0;
+                transition:  ease-in 1s;
                 .progress-bar {
                     position: relative;
                     span {

@@ -1,23 +1,7 @@
-// var items = [];
-// var printing = [];
-// var web = [];
-// var illus = [];
-// var media = [];
-// var craft = [];
-$(document).ready(function() {
-    // Owl Init
-    $(".owl-carousel").owlCarousel({
-        autoplay: true,
-        nav: true,
-        loop: true,
-        dots: true,
-        items: 1,
-        margin: 0,
-        navText: ["", ""],
-    });
 
+$(document).ready(function () {
     // Navbar
-    $(document).on("scroll", function() {
+    $(document).on("scroll", function () {
         if (pageYOffset != 0) {
             $(".nav_brand").css({ width: "62px" });
             $("#navbar").css({ "background-color": "rgba(255, 255, 255, 1)" });
@@ -35,7 +19,7 @@ $(document).ready(function() {
         layoutMode: "fitRows",
         filter: "*",
     });
-    $(".gallery__filter").on("click", function() {
+    $(".gallery__filter").on("click", function () {
         _filter = $(this).attr("data-filter");
         if (_filter == "*") {
             $(".grid").isotope({
@@ -47,60 +31,61 @@ $(document).ready(function() {
             });
         }
     });
-    // items = document.querySelectorAll("#gallery__grid .gallery__item");
-    // printing.push(items[0], items[3], items[0]);
-    // web.push(items[1], items[4], items[6], items[7]);
-    // illus.push(items[0], items[2], items[5]);
-    // media.push(items[1], items[3], items[4], items[5]);
-    // craft.push(items[2], items[5], items[6], items[7]);
-    // items.forEach(function(i) { console.log(i) })
-    // $(".gallery__filter").on("click", function() {
-    //     var category = $(this).attr("data-category");
-    //     console.log(category);
-    //     if (category == "all") {
-    //         items.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    //     if (category == "printing") {
-    //         items.forEach(function(i) {
-    //             i.classList.remove("show");
-    //         });
-    //         printing.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    //     if (category == "web") {
-    //         items.forEach(function(i) {
-    //             i.classList.remove("show");
-    //         });
-    //         web.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    //     if (category == 'illustration') {
-    //         items.forEach(function(i) {
-    //             i.classList.remove("show");
-    //         });
-    //         illus.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    //     if (category == 'media') {
-    //         items.forEach(function(i) {
-    //             i.classList.remove("show");
-    //         });
-    //         media.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    //     if (category == 'craft') {
-    //         items.forEach(function(i) {
-    //             i.classList.remove("show");
-    //         });
-    //         craft.forEach(function(i) {
-    //             i.classList.add("show");
-    //         });
-    //     }
-    // });
+
+    // Magnify Popup Lightbox
+    $('.image-link').magnificPopup({
+        items: [
+            {
+                src: './img/portfolio/01.jpg'
+            },
+            {
+                src: './img/portfolio/02.jpg',
+            },
+            {
+                src: './img/portfolio/03.jpg',
+            },
+            {
+                src: './img/portfolio/04.jpg',
+            },
+            {
+                src: './img/portfolio/05.jpg',
+            },
+            {
+                src: './img/portfolio/06.jpg',
+            },
+            {
+                src: './img/portfolio/07.jpg',
+            },
+            {
+                src: './img/portfolio/08.jpg',
+            }
+        ],
+        gallery: {
+            enabled: true
+        },
+        type: 'image',
+        // Delay in milliseconds before popup is removed
+        removalDelay: 300,
+
+        // Class that is added to popup wrapper and background
+        // make it unique to apply your CSS animations just to this exact popup
+        mainClass: 'mfp-fade'
+    });
+
+    //Animate width 
+    $(window).on('scroll', function () {
+        var item1 = $('.progress:eq(0)');
+        var item2 = $('.progress:eq(1)');
+        var item3 = $('.progress:eq(2)');
+        var _pageYOffset = window.pageYOffset;
+        if (_pageYOffset >= 900) {
+            item1.css({ 'width': '100%' });
+        }
+        if (_pageYOffset >= 965) {
+            item2.css({ 'width': '100%' });
+        }
+        if (_pageYOffset >= 1040) {
+            item3.css({ 'width': '100%' });
+        }
+    })
 });

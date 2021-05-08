@@ -63,59 +63,74 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
 #home {
   position: relative;
 }
 
-#home .owl-carousel .item {
+#home .carousel-indicators li {
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto 5px;
+}
+
+#home .carousel-indicators li.active {
+  background-color: #fff;
+}
+
+#home #carouselId .carousel-inner .carousel-item {
   height: 100vh;
   background-size: cover;
   background-position: top center;
 }
 
-#home .owl-carousel .owl-nav {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
-  margin-top: 0;
-}
-
-#home .owl-carousel .owl-nav .owl-prev, #home .owl-carousel .owl-nav .owl-next {
+#home #carouselId .carousel-control-prev, #home #carouselId .carousel-control-next {
   width: 25%;
   cursor: url("../../img/carousel/arrow_left.png"), auto;
 }
 
-#home .owl-carousel .owl-nav .owl-prev:hover, #home .owl-carousel .owl-nav .owl-next:hover {
+#home #carouselId .carousel-control-prev:hover, #home #carouselId .carousel-control-next:hover {
   background-color: transparent;
 }
 
-#home .owl-carousel .owl-nav .owl-next {
+#home #carouselId .carousel-control-next {
   cursor: url("../../img/carousel/arrow_right.png"), auto;
-}
-
-#home .owl-carousel .owl-dots {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
-}
-
-#home .owl-carousel .owl-dots .owl-dot span {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-#home .owl-carousel .owl-dots .owl-dot.active span {
-  background-color: #fff;
 }
 
 #navbar {
@@ -124,7 +139,7 @@ body {
   transition: all 0.3s;
   position: fixed;
   top: 0;
-  z-index: 10000;
+  z-index: 1000;
   width: 100%;
   padding: 0;
 }
@@ -206,6 +221,9 @@ body {
   border-radius: 0;
   height: 1.3rem;
   overflow: visible;
+  width: 0;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
 }
 
 #about .about__skill .skill__details .progress .progress-bar {

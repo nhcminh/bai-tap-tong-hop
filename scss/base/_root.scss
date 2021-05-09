@@ -51,7 +51,6 @@ button:focus {
 }
 
 body {
-<<<<<<< HEAD
     color: $black;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 15px;
@@ -60,24 +59,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-=======
-  color: $black;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 .heading__section_mb {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .content__padding {
-  padding: 100px 0;
->>>>>>> ce36e308e6bf9cfebfb0c5d8db8f1ea4d764ca29
+    padding: 100px 0;
 }
 
 

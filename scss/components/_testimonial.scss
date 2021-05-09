@@ -1,0 +1,30 @@
+#testimonial {
+  background: url(../../img/parallax/19.jpg);
+  background-attachment: fixed;
+  .testimonial__item {
+    text-align: center;
+    .item__img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .item__content {
+      p {
+        font-size: 16px;
+        font-style: italic;
+        line-height: 30px;
+        width: 60%;
+        margin: 0 auto;
+      }
+      .name,
+      span {
+        margin-top: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+  @include owl-carousel();
+}

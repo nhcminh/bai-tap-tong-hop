@@ -10,7 +10,31 @@ $(document).ready(function () {
     navText: ["", ""],
   });
 
-  $('.owl-2').owlCarousel({
+  $(".owl-2").owlCarousel({
+    loop: true,
+    autoplay: false,
+    dots: true,
+    nav: false,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+      },
+      600: {
+        items: 3,
+        nav: false,
+      },
+      1000: {
+        items: 1,
+        nav: true,
+        loop: false,
+      },
+    },
+  });
+
+  $('.owl-3').owlCarousel({
     loop:true,
     autoplay: false,
     dots:true,
@@ -27,7 +51,7 @@ $(document).ready(function () {
             nav:false
         },
         1000:{
-            items:1,
+            items:6,
             nav:true,
             loop:false
         }

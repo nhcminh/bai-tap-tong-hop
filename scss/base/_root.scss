@@ -1,85 +1,110 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2 {
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $dark;
-  font-weight: normal;
-  line-height: 1.5;
+    color: $dark;
+    font-weight: normal;
+    line-height: 1.5;
 }
+
 p {
-  margin: 0;
-  color: #7e7e7e;
-  line-height: 2rem;
+    margin: 0;
+    color: #7e7e7e;
+    line-height: 2rem;
 }
+
 li {
-  list-style: none;
-  display: inline;
+    list-style: none;
+    display: inline;
 }
+
 a:link,
 a:visited {
-  text-decoration: none;
-  color: $dark;
+    text-decoration: none;
+    color: $dark;
 }
+
 button:focus {
-  outline: none;
+    outline: none;
 }
+
 ::selection {
-  color: white;
-  background-color: $yellow;
+    color: white;
+    background-color: $yellow;
 }
+
 body {
-  color: $black;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  
+    color: $black;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
+
 
 /* overlay at start */
-.mfp-fade.mfp-bg {
-  opacity: 0;
 
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 }
+
+
 /* overlay animate in */
+
 .mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
+    opacity: 0.8;
 }
+
+
 /* overlay animate out */
+
 .mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
+    opacity: 0;
 }
+
 
 /* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
 
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 }
+
+
 /* content animate it */
+
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
+    opacity: 1;
 }
+
+
 /* content animate out */
+
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
+    opacity: 0;
 }

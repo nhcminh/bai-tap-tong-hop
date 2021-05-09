@@ -1,48 +1,40 @@
 #home {
   position: relative;
-  .owl-carousel {
-    .item {
-      height: 100vh;
-      background-size: cover;
-      background-position: top center;
+  .carousel-indicators {
+    li {
+      background-color: transparent;
+      border: 1px solid $light;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: auto 5px;
     }
-    .owl-nav {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      height: 100%;
-      margin-top: 0;
-      .owl-prev {
-        width: 25%;
-        cursor: url("../../img/carousel/arrow_left.png"), auto;
-        &:hover {
-          background-color: transparent;
-        }
-      }
-      .owl-next {
-        @extend .owl-prev;
-        cursor: url("../../img/carousel/arrow_right.png"), auto;
-      }
+    li.active {
+      background-color: $light;
     }
-    .owl-dots {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      .owl-dot {
+  }
+  #carouselId {
+    .carousel-inner {
+      .carousel-item {
+        height: 100vh;
+        background-size: cover;
+        background-position: top center;
         span {
-          background-color: transparent;
-          border: 1px solid $light;
-        }
-      }
-      .owl-dot.active {
-        span {
-          background-color: $light;
+          font-size: 1.2rem;
         }
       }
     }
+    .carousel-control-prev {
+      width: 25%;
+      cursor: url("../../img/carousel/arrow_left.png"), auto;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .carousel-control-next {
+      @extend .carousel-control-prev;
+      cursor: url("../../img/carousel/arrow_right.png"), auto;
+    }
+    
   }
 }

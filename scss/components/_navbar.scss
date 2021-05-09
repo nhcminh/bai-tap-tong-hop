@@ -3,7 +3,7 @@
     transition: all 0.3s;
     position: fixed;
     top: 0;
-    z-index: 10000;
+    z-index: 1000;
     width: 100%;
     padding: 0;
     .nav_brand{
@@ -24,6 +24,17 @@
         }
         .nav-link.active {
           color: $yellow;
+        }
+      }
+    }
+  }
+
+  @media (max-width:768px) {
+    #navbar {
+      .navbar-nav {
+        .nav-item {
+          border-top: solid 1px #f0f0f0;
+          padding: 0.5rem 0 0.5rem 2rem;
         }
       }
     }

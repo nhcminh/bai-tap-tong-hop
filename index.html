@@ -22,6 +22,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!--Magnify Popup-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css">
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -30,80 +34,109 @@
     <!--Home Section-->
     <header id="home">
         <!-- Navbar Section -->
-        <nav id="navbar" class="navbar navbar-expand">
-            <div class="col-md-2">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <div class="col-2">
                 <a href=""><img class="nav_brand" src="./img/logo.png" alt=""></a>
             </div>
-            <div class="col-md-8 ml-auto">
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#price-tabe">Price Table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <div class="col-10 d-lg-none text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="icon-software_paragraph_justify_all"></span>
+                </button>
+            </div>
+            <div class="col-lg-8 ml-auto">
+                <ul id="collapsibleNavbar"
+                    class="navbar-nav collapse navbar-collapse justify-content-lg-end align-items-start">
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#feature">Features</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#price-tabe">Price Table</a></li>
+                    <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
+
         </nav>
 
         <!--Carousel Section-->
-        <div class="owl-carousel owl-theme">
-            <div class="item d-flex align-items-center" style="background-image: url('./img/banner_bs/bs1.jpg');">
-                <div class="container item__content">
-                    <h1 class="text-uppercase">
-                        <span class="text-uppercase">Hi There ! </span><br>
-                        We Are Massive
-                    </h1>
-                    <p>
-                        Integer nec nulla bibendum, venenatis elit vel, vulputate nulla. Quisque lacinia nisi erat,
-                        <br>
-                        ut scelerisque augue pharetra et. Aliquam efficitur lacus eget.
-                    </p>
+        <div id="carouselId" class="carousel slide carousel-fade" data-ride="">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselId" data-slide-to="1"></li>
+                <li data-target="#carouselId" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="background-image: url('./img/banner_bs/bs1.jpg');">
+                    <div class="container h-100">
+                        <div class="row h-100 justify-content-center align-items-center">
+                            <div class="col-lg-12 wow animate__animated animate__fadeInDown">
+                                <h1 class="text-uppercase wow animate__animated animate__fadeInDown">
+                                    <span class="text-uppercase">Hi There ! </span><br> We Are Massive
+                                </h1>
+                                <p>
+                                    Integer nec nulla bibendum, venenatis elit vel, vulputate nulla. Quisque lacinia
+                                    nisi erat,
+                                    <br> ut scelerisque augue pharetra et. Aliquam efficitur lacus eget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('./img/banner_bs/bs2.jpg');">
+                    <div class="container h-100">
+                        <div class="row h-100 justify-content-center align-items-center">
+                            <div class="col-lg-12 wow animate__animated animate__fadeInDown">
+                                <h1 class="text-uppercase wow animate__animated animate__fadeInDown">
+                                    <span class="text-uppercase"> We've Lots of !</span><br> Reusable Components
+                                </h1>
+                                <p>
+                                    Vulputate nulla. Quisque lacinia nisi erat,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('./img/banner_bs/bs3.jpg');">
+                    <div class="container h-100">
+                        <div class="row h-100 justify-content-center align-items-center">
+                            <div class="col-lg-12 wow animate__animated animate__fadeInDown">
+                                <h1 class="text-white text-uppercase wow animate__animated animate__fadeInDown">
+                                    <span class="text-white text-uppercase"> Why Choose massive ? </span><br> unlimited
+                                    possibilities
+                                </h1>
+                                <p class="text-white">
+                                    Integer nec nulla bibendum, venenatis elit vel, vulputate nulla. Quisque lacinia
+                                    nisi erat,
+                                    <br> ut scelerisque augue pharetra et. Aliquam efficitur lacus eget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="item d-flex align-items-center" style="background-image: url('./img/banner_bs/bs2.jpg');">
-                <div class="container item__content">
-                    <h1 class="text-uppercase">
-                        <span class="text-uppercase"> We've Lots of !</span><br>
-                        Reusable Components
-                    </h1>
-                    <p>
-                        Vulputate nulla. Quisque lacinia nisi erat,
-                    </p>
-                </div>
-            </div>
-            <div class="item d-flex align-items-center" style="background-image: url('./img/banner_bs/bs3.jpg');">
-                <div class="container item__content">
-                    <h1 class="text-white text-uppercase">
-                        <span class="text-white text-uppercase"> Why Choose massive ? </span><br>
-                        unlimited possibilities
-                    </h1>
-                    <p class="text-white">
-                        Integer nec nulla bibendum, venenatis elit vel, vulputate nulla. Quisque lacinia nisi erat,
-                        <br>
-                        ut scelerisque augue pharetra et. Aliquam efficitur lacus eget.
-                    </p>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+            </a>
+            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+            </a>
         </div>
     </header>
     <!-- About Section -->
     <section id="about">
         <div class="container mt-5 pb-5">
             <div class="row justify-content-center py-5">
-                <div class="col-md-8 text-center">
+                <div class="col-12 col-lg-8 text-center">
                     <h3 class="text-uppercase">WE Love to Design</h3>
                     <p class="mt-4">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
                         nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <div class="col-md-10">
-                    <div class="row flex-nowrap justify-content-center">
-                        <div class="col-md-4 mx-5 p-4 border about__item">
+                <div class="col-12 col-lg-10">
+                    <div class="row flex-lg-nowrap justify-content-center">
+                        <div
+                            class="col-12 col-lg-4 mx-md-5 mb-5 mb-lg-0 p-4 border about__item wow animate__animated animate__fadeInLeft">
                             <div class="about__icon-wrapper">
                                 <span class="icon-tools2 about__icon"></span>
                             </div>
@@ -111,7 +144,8 @@
                             <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent
                                 sed nisi eleifend.</p>
                         </div>
-                        <div class="col-md-4 mx-5 p-4 border about__item">
+                        <div
+                            class="col-12 col-lg-4 mx-md-5 mb-5 mb-lg-0 p-4 border about__item wow animate__animated animate__fadeInUp">
                             <div class="about__icon-wrapper">
                                 <span class="icon-mobile about__icon"></span>
                             </div>
@@ -119,7 +153,8 @@
                             <p>Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent
                                 sed nisi eleifend.</p>
                         </div>
-                        <div class="col-md-4 mx-5 p-4 border about__item">
+                        <div
+                            class="col-12 col-lg-4 mx-md-5 mb-5 mb-lg-0 p-4 border about__item wow animate__animated animate__fadeInRight">
                             <div class="about__icon-wrapper">
                                 <span class="icon-wine about__icon"></span>
                             </div>
@@ -133,43 +168,42 @@
         </div>
         <div class="container-fluid about__skill mt-5">
             <div class="row align-items-center justify-content-center">
-                <div class="col-md-12 bg__overlay"></div>
-                <div class="col-md-5">
+                <div class="col-lg-12 bg__overlay d-none d-lg-block"></div>
+                <div class="col-12 col-lg-5 d-flex d-lg-block align-items-end align-items-md-center justify-content-center">
                     <h3 class="text-uppercase text-white text-center">Skills and Experience</h3>
                 </div>
-                <div class="col-md-5 pl-5">
-                    <div class="container">
-                        <div class="row flex-column skill__details justify-content-center">
-                            <div class="col-md-10 d-flex flex-column justify-content-around">
+                <div class="col-12 col-lg-5 pl-lg-5 d-flex d-lg-block">
+                    <div class="container-lg">
+                        <div class="row skill__details p-md-5 p-lg-0">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-around">
                                 <div>
                                     <h4 class="text-uppercase text-white">We are damn expart !</h4>
                                     <p class="text-white">We are a team of multi-skilled and curious digital specialists
-                                        who are always up for
-                                        a massive
-                                        challenge forever. We are a team of multi-skilled and curious digital
-                                        specialists
-                                        who are always
-                                        up for a massive challenge forever.</p>
+                                        who are always up for a massive challenge forever. We are a team of
+                                        multi-skilled and curious digital specialists who are always up for a massive
+                                        challenge
+                                        forever.
+                                    </p>
                                 </div>
                                 <div class="progress">
                                     <div class="progress-bar bg-white text-dark text-left p-2" role="progressbar"
                                         style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                         HTML / CSS / JQUERY
-                                        <span>80%</span>
+                                        <span><i class="counter">80</i>%</span>
                                     </div>
                                 </div>
                                 <div class="progress">
                                     <div class="progress-bar bg-white text-dark text-left p-2" role="progressbar"
                                         style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                                         PHOTOSHOP
-                                        <span>90%</span>
+                                        <span><i class="counter">90</i>%</span>
                                     </div>
                                 </div>
                                 <div class="progress">
                                     <div class="progress-bar bg-white text-dark text-left p-2" role="progressbar"
                                         style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                         GRAPHIC DESIGN
-                                        <span>75%</span>
+                                        <span><i class="counter">75</i>%</span>
                                     </div>
                                 </div>
                             </div>
@@ -184,15 +218,15 @@
     <!-- Team Section -->
     <section id="team">
         <div class="container pb-5">
-            <div class="row justify-content-center py-5">
-                <div class="col-md-8 text-center">
+            <div class="row justify-content-center pt-5 p-3 p-md-5">
+                <div class="col-12 col-lg-8 text-center">
                     <h3 class="text-uppercase">OUR TEAM</h3>
                     <p class="mt-4">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
                         nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
                 </div>
             </div>
             <div class="row py-5">
-                <div class="col-md-4 px-4">
+                <div class="col-lg-4 px-4 wow animate__animated animate__fadeInLeft">
                     <div class="card">
                         <img class="card-img-top" src="./img/team/t-1.jpg" alt="">
                         <div class="card-body">
@@ -205,18 +239,18 @@
                                     <div class="py-4 px-3">
                                         <h4 class="text-uppercase">I love to design</h4>
                                         <p class="mt-4">We are a team of multi-skilled and curious digital specialists
-                                            who are
-                                            always
-                                            up for a challenge and learning as fast as digital is changing.</p>
+                                            who are always up for a challenge and learning as fast as digital is
+                                            changing.</p>
                                     </div>
-                                    <div class="team-member__social navbar-expand col-md-12">
+                                    <div class="team-member__social navbar-expand col-lg-12">
                                         <ul class="navbar-nav justify-content-center h-100 align-items-end">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="">
                                                     <i class="fab fa-facebook-f    "></i>
                                                 </a>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">
                                                     <i class="fab fa-twitter  "></i>
                                                 </a>
                                             </li>
@@ -233,7 +267,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-4 px-4">
+                <div class="col-lg-4 px-4 wow animate__animated animate__fadeInUp">
                     <div class="card">
                         <img class="card-img-top" src="./img/team/t-2.jpg" alt="">
                         <div class="card-body">
@@ -246,18 +280,18 @@
                                     <div class="py-4 px-3">
                                         <h4 class="text-uppercase">Hello There..</h4>
                                         <p class="mt-4">We are a team of multi-skilled and curious digital specialists
-                                            who are
-                                            always
-                                            up for a challenge and learning as fast as digital is changing.</p>
+                                            who are always up for a challenge and learning as fast as digital is
+                                            changing.</p>
                                     </div>
-                                    <div class="team-member__social navbar-expand col-md-12">
+                                    <div class="team-member__social navbar-expand col-lg-12">
                                         <ul class="navbar-nav justify-content-center h-100 align-items-end">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="">
                                                     <i class="fab fa-facebook-f    "></i>
                                                 </a>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">
                                                     <i class="fab fa-twitter  "></i>
                                                 </a>
                                             </li>
@@ -273,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 px-4">
+                <div class="col-lg-4 px-4 wow animate__animated animate__fadeInRight">
                     <div class="card">
                         <img class="card-img-top" src="./img/team/t-3.jpg" alt="">
                         <div class="card-body">
@@ -286,18 +320,18 @@
                                     <div class="py-4 px-3">
                                         <h4 class="text-uppercase">Its awesome</h4>
                                         <p class="mt-4">We are a team of multi-skilled and curious digital specialists
-                                            who are
-                                            always
-                                            up for a challenge and learning as fast as digital is changing.</p>
+                                            who are always up for a challenge and learning as fast as digital is
+                                            changing.</p>
                                     </div>
-                                    <div class="team-member__social navbar-expand col-md-12">
+                                    <div class="team-member__social navbar-expand col-lg-12">
                                         <ul class="navbar-nav justify-content-center h-100 align-items-end">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="">
                                                     <i class="fab fa-facebook-f    "></i>
                                                 </a>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">
                                                     <i class="fab fa-twitter  "></i>
                                                 </a>
                                             </li>
@@ -321,7 +355,7 @@
     <section id="portfolio">
         <div class="container">
             <div class="row justify-content-center py-5">
-                <div class="col-md-8 text-center">
+                <div class="col-lg-8 text-center">
                     <h3 class="text-uppercase">PORTFOLIO</h3>
                     <p class="mt-4">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
                         nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
@@ -329,37 +363,39 @@
             </div>
         </div>
         <div class="container-fluid gallery">
-            <div class="col-md-8 navbar-expand mx-auto">
-                <ul class="navbar-nav justify-content-center gallery__filters">
+            <div class="col-lg-8 navbar-expand mx-auto">
+                <ul class="navbar-nav justify-content-center gallery__filters flex-wrap">
                     <li class="nav-item active">
-                        <button class="nav-link btn gallery__filter">all</button>
+                        <button class="nav-link btn gallery__filter" data-filter="*">all</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link btn gallery__filter">printing</button>
+                        <button class="nav-link btn gallery__filter" data-filter="printing">printing</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link btn gallery__filter">web</button>
+                        <button class="nav-link btn gallery__filter" data-filter="web">web</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link btn gallery__filter">illustration</button>
+                        <button class="nav-link btn gallery__filter" data-filter="illustration">illustration</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link btn gallery__filter">media</button>
+                        <button class="nav-link btn gallery__filter" data-filter="media">media</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link btn gallery__filter">craft</button>
+                        <button class="nav-link btn gallery__filter" data-filter="craft">craft</button>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-12">
-                <div class="row py-4">
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+            <div class="col-lg-12">
+                <div id="gallery__grid" class="row py-4 grid">
+                    <div id="item-1"
+                        class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 printing illustration">
                         <img class="img-fluid" src="./img/portfolio/01.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/01.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -368,13 +404,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id="item-2" class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 web media">
                         <img class="img-fluid" src="./img/portfolio/02.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/02.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -383,13 +420,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id="item-3"
+                        class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 illustration media craft">
                         <img class="img-fluid" src="./img/portfolio/03.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/03.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -398,13 +437,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id="item-4" class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 printing">
                         <img class="img-fluid" src="./img/portfolio/04.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/04.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -413,13 +453,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id="item-5" class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 web media">
                         <img class="img-fluid" src="./img/portfolio/05.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/05.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -428,13 +469,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id=item-6
+                        class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 illustration media craft">
                         <img class="img-fluid" src="./img/portfolio/06.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/06.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -443,13 +486,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id=item-7 class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 web craft">
                         <img class="img-fluid" src="./img/portfolio/07.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/07.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -458,13 +502,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 gallery__item mt-3 px-2 fade show">
+                    <div id="item-8" class="col-12 col-md-6 col-lg-3 gallery__item grid-item mt-3 px-2 web craft">
                         <img class="img-fluid" src="./img/portfolio/08.jpg" alt="">
                         <div class="overlay__hover">
                             <div class="container py-3 h-100">
                                 <div class="row justify-content-center align-items-center text-center h-100">
                                     <div class="py-4 px-3">
-                                        <div class="mb-3"><a href=""><span class="icon-basic_magnifier"></span></a>
+                                        <div class="mb-3"><a class="image-link" href="./img/portfolio/08.jpg"><span
+                                                    class="icon-basic_magnifier"></span></a>
                                         </div>
                                         <h4 class="text-uppercase"><a href="">lightbox view</a></h4>
                                         <p class=""><a href="">Category</a></p>
@@ -476,35 +521,38 @@
                 </div>
             </div>
         </div>
-        <div class="row p-5 align-items-center cta text-uppercase">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9">
+        <div class="container-fluid">
+            <div class="row p-5 align-items-center cta text-uppercase">
+            <div class="col-12">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-md-7 col-lg-6">
                         <span class="text-white">Are you impressed with our creative work? </span>
                         <h3 class="text-white">start <span>building your project</span> with massive</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-12 col-md-5 col-lg-2">
                         <button class="btn btn-black text-white">purchase now</button>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        
     </section>
 
     <!-- Services Section -->
     <section id="services">
         <div class="container">
             <div class="row justify-content-center py-5">
-                <div class="col-md-8 text-center">
+                <div class="col-lg-8 text-center">
                     <h3 class="text-uppercase">MASSIVE SERVICES</h3>
                     <p class="mt-4">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores
                         nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
                 </div>
             </div>
             <div class="row py-5">
-                <div class="col-md-12">
+                <div class="col-lg-12">
                     <div class="row text-center">
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-lightbulb"></span>
                                 <h4>Creative design</h4>
@@ -512,7 +560,7 @@
                                     Praesent sed nisi eleifend.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-browser2"></span>
                                 <h4>professional code</h4>
@@ -520,7 +568,7 @@
                                     Praesent sed nisi eleifend.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-laptop2"></span>
                                 <h4>easy customize</h4>
@@ -528,7 +576,7 @@
                                     Praesent sed nisi eleifend.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-basic_gear"></span>
                                 <h4>24/7 support</h4>
@@ -536,7 +584,7 @@
                                     Praesent sed nisi eleifend.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-basic_pencil_ruler"></span>
                                 <h4>bootstrap</h4>
@@ -544,7 +592,7 @@
                                     Praesent sed nisi eleifend.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 border services__item">
+                        <div class="col-lg-4 border services__item wow animate__animated animate__zoomIn">
                             <div class="p-5">
                                 <span class="icon-basic_todolist_pencil"></span>
                                 <h4>clean code</h4>
@@ -559,22 +607,22 @@
         <div class="row feedback mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div id="carouselId" class="carousel slide" data-ride="carousel">
+                    <div class="col-lg-12">
+                        <div id="carouselId2" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
-                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselId" data-slide-to="1"></li>
-                                <li data-target="#carouselId" data-slide-to="2"></li>
+                                <li data-target="#carouselId2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselId2" data-slide-to="1"></li>
+                                <li data-target="#carouselId2" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
                                     <div class="row align-items-end">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-6 col-lg-4 d-none d-sm-block">
                                             <img src="./img/carousel/obj-1.png" alt="First slide">
 
                                         </div>
-                                        <div class="col-md-8 py-5">
-                                            <div class="py-4">
+                                        <div class="col-12 col-sm-6 col-lg-8 py-5">
+                                            <div class="p-4">
                                                 <h4>REALLY GOOD AT WEB DESIGNING</h4>
                                                 <p class="my-4">
                                                     We are a team of multi-skilled and curious digital specialists who
@@ -590,11 +638,11 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row align-items-end">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-6 col-lg-4 d-none d-sm-block">
                                             <img src="./img/carousel/obj-2.png" alt="Second slide">
                                         </div>
-                                        <div class="col-md-8 py-5">
-                                            <div class="py-4">
+                                        <div class="col-12 col-sm-6 col-lg-8 py-5">
+                                            <div class="p-4">
                                                 <h4>REALLY GOOD AT WEB DESIGNING</h4>
                                                 <p class="my-4">
                                                     We are a team of multi-skilled and curious digital specialists who
@@ -610,11 +658,11 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row align-items-end">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-6 col-lg-4 d-none d-sm-block">
                                             <img src="./img/carousel/obj-3.png" alt="Third slide">
                                         </div>
-                                        <div class="col-md-8 py-5">
-                                            <div class="py-4">
+                                        <div class=" col-12 col-sm-6col-lg-8 py-5">
+                                            <div class="p-4">
                                                 <h4>REALLY GOOD AT WEB DESIGNING</h4>
                                                 <p class="my-4">
                                                     We are a team of multi-skilled and curious digital specialists who
@@ -1150,7 +1198,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="./lib/jquery.countup.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

@@ -386,6 +386,15 @@ body {
   letter-spacing: 3px;
 }
 
+#team .card .overlay__hover .team-member__social a:hover i {
+  color: #d6b161;
+}
+
+#team .card .overlay__hover .team-member__social a i {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 #portfolio {
   overflow: hidden;
 }
@@ -430,6 +439,15 @@ body {
 #portfolio .gallery .gallery__item .overlay__hover h4 {
   font-size: 0.9rem;
   letter-spacing: 3px;
+}
+
+#portfolio .gallery .gallery__item .overlay__hover .team-member__social a:hover i {
+  color: #d6b161;
+}
+
+#portfolio .gallery .gallery__item .overlay__hover .team-member__social a i {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #portfolio .gallery .gallery__item .overlay__hover {

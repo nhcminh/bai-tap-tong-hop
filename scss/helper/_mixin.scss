@@ -15,6 +15,18 @@
       font-size: 0.9rem;
       letter-spacing: 3px;
     }
+    .team-member__social {
+      a {
+        &:hover {
+          i {
+            color: $yellow;
+          }
+        }
+        i {
+          transition: all 0.5s;
+        }
+      }
+    }
   }
 }
 @mixin btn-black {

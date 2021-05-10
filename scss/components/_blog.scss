@@ -5,6 +5,7 @@
       height: 301px;
     }
     .item__info {
+      position: relative;
       padding: 40px;
       display: flex;
       align-items: start;
@@ -60,6 +61,10 @@
     }
     .item__img {
       position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .item__img::after {
       position: absolute;

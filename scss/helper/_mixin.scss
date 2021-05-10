@@ -43,7 +43,7 @@
     }
   }
 }
-@mixin btn-white($hoverBg,$solid) {
+@mixin btn-white($hoverBg, $solid) {
   .btn-white {
     color: #222;
     font-size: 0.9rem;
@@ -58,47 +58,29 @@
       color: #fff;
     }
   }
-
 }
 
-//Owl Carousel 
-@mixin owl-carousel {
-  .owl-nav {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    margin-top: 0;
-    .owl-prev {
-      width: 25%;
-      cursor: url("../../img/carousel/arrow_left.png"), auto;
-      &:hover {
-        background-color: transparent;
-      }
-    }
-    .owl-next {
-      @extend .owl-prev;
-      cursor: url("../../img/carousel/arrow_right.png"), auto;
-    }
+//Owl Carousel
+@mixin owl-carousel($bgDot,$bgDotActive) {
+  .owl-stage {
+    transition: all 800ms ease 0s !important;
   }
   .owl-dots {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
     .owl-dot {
-      span {
-        background-color: transparent;
-        border: 1px solid $light;
-      }
+      width: 12px;
+      height: 12px;
+      margin: 5px 7px;
+      opacity: 0.5;
+      border-radius: 50%;
+      background-color: $bgDot;
+      // background-color: transparent;
+      border: 1px solid $bgDotActive;
     }
     .owl-dot.active {
-      span {
-        background-color: $light;
-      }
+      background-color: $bgDotActive;
     }
   }
 }

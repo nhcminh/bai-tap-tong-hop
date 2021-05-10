@@ -4,11 +4,17 @@
   .testimonial__item {
     text-align: center;
     .item__img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
     }
     .item__content {
+      margin-bottom: 1rem;
       p {
         font-size: 16px;
         font-style: italic;
@@ -26,5 +32,12 @@
       }
     }
   }
-  @include owl-carousel();
+  @include owl-carousel($bgDotTest,$light);
+
+  @media screen and(min-width:767px) and(max-width:1199px) {
+    .testimonial__content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

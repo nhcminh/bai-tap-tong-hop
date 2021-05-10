@@ -116,3 +116,24 @@ body {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     opacity: 0;
 }
+
+// Button back to top
+.cd-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    transition: all .3s;
+    text-align: center;
+    background: rgba(0, 0, 0, .6);
+    line-height: 40px;
+    &:hover {
+       background-color: $yellow;
+       color: $dark;
+    }
+    i {
+        color: #fff;
+    }
+}

@@ -3,6 +3,11 @@
     .feature__left {
       padding-right: 30px;
       padding-left: 30px;
+      transform: translate(0);
+      transition: all 0.3s;
+      @keyframes feature__left{
+        
+      }
     }
     .feature__right {
       padding-right: 30px;

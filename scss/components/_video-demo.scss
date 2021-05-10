@@ -1,6 +1,11 @@
 #video-demo {
   position: relative;
-  .col-md-6 {
+  .col-lg-6 {
+    .video {
+      iframe {
+        width: 100%;
+      }
+    }
       img {
         width: 100%;
       }

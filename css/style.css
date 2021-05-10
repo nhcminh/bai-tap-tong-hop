@@ -111,6 +111,7 @@ body {
 
 .cd-top {
   position: fixed;
+  z-index: 1000;
   right: 20px;
   bottom: 20px;
   width: 40px;
@@ -625,9 +626,7 @@ body {
   transition: all 0.3s;
 }
 
-@-webkit-keyframes feature__left {}
-
-@keyframes feature__left {}#feature .feature__content .feature__right {
+#feature .feature__content .feature__right {
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -835,6 +834,10 @@ body {
   margin-left: -19px;
 }
 
+#blog .blog__a {
+  padding-bottom: 100px;
+}
+
 #blog .blog__a:hover a,
 #blog .blog__a:hover i {
   color: #222;
@@ -945,11 +948,7 @@ body {
   position: relative;
 }
 
-#video-demo .col-lg-6 .video iframe {
-  width: 100%;
-}
-
-#video-demo .col-lg-6 img {
+#video-demo img {
   width: 100%;
 }
 
@@ -973,6 +972,10 @@ body {
 
 #video-demo .img-post__content p {
   color: #fff;
+}
+
+#video-demo .video-demo__content .video iframe {
+  width: 100%;
 }
 
 #price-table .card {

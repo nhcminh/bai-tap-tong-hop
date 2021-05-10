@@ -1,17 +1,8 @@
 #video-demo {
   position: relative;
-  .col-lg-6 {
-    .video {
-      iframe {
-        width: 100%;
-      }
-    }
-      img {
-        width: 100%;
-      }
-   
+  img {
+    width: 100%;
   }
-
   .img-post__content {
     position: absolute;
     top: 10%;
@@ -28,6 +19,13 @@
     }
     p {
       color: #fff;
+    }
+  }
+  .video-demo__content {
+    .video {
+      iframe {
+        width: 100%;
+      }
     }
   }
 }
